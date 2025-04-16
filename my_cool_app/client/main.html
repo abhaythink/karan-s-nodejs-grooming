@@ -1,0 +1,24 @@
+<head>
+  <title>Meteor Todo App</title>
+</head>
+
+<body>
+  <h1 style="text-align: center;">Welcome to Meteor!</h1>
+  <form class="new-task">
+    <input type="text" name="text" placeholder="Type a new task..." />
+    <button type="submit">Add</button>
+  </form>
+  <ul>
+    {{#each todos}}
+      <li>
+        {{text}} 
+        <button class="delete">&times;</button>
+      </li>
+    {{/each}}
+  </ul>
+  
+</body>
+
+<template name="todo">
+  <li>{{ text}}</li>
+</template>
